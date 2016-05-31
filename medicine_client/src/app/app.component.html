@@ -1,0 +1,23 @@
+<md-toolbar [color]="primary" style="background-color: #2196F3; color: #fff;">
+  <span>Medicine</span>
+</md-toolbar>
+<md-sidenav-layout style="background-color: rgb(240,240,240);">
+  <md-sidenav style="width: 240px" opened="true" mode="side">
+    <a md-button class="nav-link" [routerLink]="['Facilities']">Facilities</a><br/>
+    <a md-button class="nav-link" [routerLink]="['Departments']">Departments</a><br/>
+    <a md-button class="nav-link" [routerLink]="['Doctors']">Doctors</a><br/>
+    <a md-button class="nav-link" [routerLink]="['DoctorSpecializations']">Doctor Specializations</a><br/>
+    <a md-button class="nav-link" [routerLink]="['Labs']">Labs</a><br/>
+    <a md-button class="nav-link" [routerLink]="['LabFacilities']">Lab-Facility contracts</a><br/>
+    <a md-button class="nav-link" [routerLink]="['MedicalRecords']">Medical Records</a><br/>
+    <a md-button class="nav-link" [routerLink]="['Operations']">Operations</a><br/>
+    <a md-button class="nav-link" [routerLink]="['Patients']">Patients</a><br/>
+    <a md-button class="nav-link" [routerLink]="['Rooms']">Rooms</a><br/>
+    <a md-button class="nav-link" [routerLink]="['Staffs']">Staff</a><br/>
+    <a md-button class="nav-link" [routerLink]="['StaffSpecializations']">Staff specializations</a><br/>
+    <a md-button class="nav-link" [routerLink]="['Stats']">Statistics</a><br/>
+  </md-sidenav>
+  <div style="padding: 8px;width: 50%; height: 960px; margin: 0 auto;">
+    <router-outlet></router-outlet>
+  </div>
+</md-sidenav-layout>

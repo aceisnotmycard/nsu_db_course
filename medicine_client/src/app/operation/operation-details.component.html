@@ -1,0 +1,11 @@
+<md-card *ngIf="item">
+  <div>
+    Surgeon: {{item.surgeon.name}}<br>
+    Patient: {{item.record.patient.name}}<br>
+    Facility address: {{item.facility.address}}<br>
+    Date: {{item.date}}<br>
+    <md-checkbox type="checkbox" [(ngModel)]="item.isSurvived">Survived</md-checkbox><br/>
+  </div>
+  <button md-button (click)="update()">Update</button>
+  <button md-button (click)="del()">Delete</button>
+</md-card>

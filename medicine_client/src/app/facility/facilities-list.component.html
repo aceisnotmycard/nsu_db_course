@@ -1,0 +1,20 @@
+<md-card style="width: 480px; margin: 8px;">
+  <md-card-title>Facilities list</md-card-title>
+  <md-list>
+    <md-list-item *ngFor="let facility of items">
+      <facility-item [item]="facility"></facility-item>
+    </md-list-item>
+  </md-list>
+</md-card>
+
+<md-card style="width: 480px; margin: 8px;">
+  <md-card-title>Add new facility</md-card-title>
+  <div>
+    <md-input [(ngModel)]="newItem.address" placeholder="address"></md-input><br>
+    <md-checkbox [(ngModel)]="newItem.clinic">Clinic?</md-checkbox>
+    <div *ngIf="newItem.clinic === true">
+      <md-input placeholder="Parent hospital id" [(ngModel)]="newItem.parentId" type="number"></md-input>
+    </div>
+  </div>
+  <button md-button (click)="create()">Add</button>
+</md-card>

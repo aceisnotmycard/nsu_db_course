@@ -1,0 +1,4 @@
+<div *ngIf="item">
+  Patient: {{item.record.patient.name}}, Surgeon: {{item.surgeon.name}}, Date: {{item.date}}
+  <button md-button (click)="details()">Details</button>
+</div>

@@ -1,0 +1,17 @@
+<md-card style="width: 480px; margin: 8px;">
+  <md-card-title>Doctor specializations list</md-card-title>
+  <md-list>
+    <md-list-item *ngFor="let doc of items">
+      <doctor-specialization-item [item]="doc"></doctor-specialization-item>
+    </md-list-item>
+  </md-list>
+</md-card>
+
+<md-card style="width: 480px; margin: 8px;">
+  <md-card-title>Add new specialization</md-card-title>
+  <md-input [(ngModel)]="newItem.name" placeholder="Name"></md-input><br>
+  <md-checkbox [(ngModel)]="newItem.isSurgeon">Surgeon</md-checkbox><br/>
+  <md-input placeholder="Salary coefficient" [(ngModel)]="newItem.salaryCoef" type="number" step="0.01"></md-input><br/>
+  <md-input placeholder="Vacation days" [(ngModel)]="newItem.vacationDays" type="number"></md-input><br/>
+  <button md-button (click)="create()">Add</button>
+</md-card>

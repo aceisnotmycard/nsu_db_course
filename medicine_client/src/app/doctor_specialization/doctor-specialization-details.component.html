@@ -1,0 +1,10 @@
+<md-card *ngIf="item">
+  <div>
+    <md-input [(ngModel)]="item.name" placeholder="Name"></md-input><br>
+    <md-checkbox [(ngModel)]="item.isSurgeon">Surgeon</md-checkbox><br/>
+    <md-input placeholder="Salary coefficient" [(ngModel)]="item.salaryCoef" type="number" step="0.01"></md-input>
+    <md-input placeholder="Vacation days" [(ngModel)]="item.vacationDays" type="number"></md-input>
+  </div>
+  <button md-button (click)="update()">Update</button>
+  <button md-button (click)="del()">Delete</button>
+</md-card>

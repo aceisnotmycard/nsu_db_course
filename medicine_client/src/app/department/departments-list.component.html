@@ -1,0 +1,17 @@
+<md-card style="width: 480px; margin: 8px;">
+  <md-card-title>Departments list</md-card-title>
+  <md-list>
+    <md-list-item *ngFor="let dep of items">
+      <department-item [item]="dep"></department-item>
+    </md-list-item>
+  </md-list>
+</md-card>
+
+<md-card style="width: 480px; margin: 8px;">
+  <md-card-title>Add new department</md-card-title>
+    <md-input [(ngModel)]="facilityId" placeholder="Facility id" type="number"></md-input><br>
+  <button md-button (click)="check()">Add</button>
+</md-card>
+<div *ngIf="errorMsg">
+  {{errorMsg}}
+</div>

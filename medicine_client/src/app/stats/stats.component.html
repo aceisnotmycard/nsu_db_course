@@ -1,0 +1,12 @@
+<md-card style="width: 480px; margin: 8px;">
+  <md-card-title>Statistics</md-card-title>
+</md-card>
+
+<md-card *ngIf="currentRecords" style="width: 480px; margin: 8px;">
+  <md-card-title>Current patients</md-card-title>
+  <md-list>
+    <md-list-item *ngFor="let rec of currentRecords">
+      {{rec.patient.name}}
+    </md-list-item>
+  </md-list>
+</md-card>

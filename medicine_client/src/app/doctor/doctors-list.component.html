@@ -1,0 +1,31 @@
+<md-card style="width: 480px; margin: 8px;">
+  <md-card-title>Doctors list</md-card-title>
+  <md-list>
+    <md-list-item *ngFor="let facility of items">
+      <doctor-item [item]="facility"></doctor-item>
+    </md-list-item>
+  </md-list>
+</md-card>
+
+<md-card style="width: 480px; margin: 8px;">
+  <md-card-title>Add new doctor</md-card-title>
+  <div>
+    <md-input [(ngModel)]="newItem.name" placeholder="Name"></md-input><br>
+    <md-input [(ngModel)]="specialization" placeholder="Specialization"></md-input><br>
+    <md-checkbox [(ngModel)]="newItem.isCandidate">Candidate?</md-checkbox><br/>
+    <div *ngIf="newItem.isCandidate === true">
+      <md-checkbox [(ngModel)]="newItem.isAssociate">Associate?</md-checkbox><br/>
+    </div>
+    <md-checkbox [(ngModel)]="newItem.isMd">MD?</md-checkbox><br/>
+    <div *ngIf="newItem.isMd === true">
+      <md-checkbox [(ngModel)]="newItem.isProfessor">Professor?</md-checkbox><br/>
+    </div>
+  </div>
+  <button md-button (click)="check()">Add</button>
+</md-card>
+
+<!--<md-card style="width: 480px; margin: 8px;">-->
+  <!--<md-card-title>Search</md-card-title>-->
+  <!--<button md-button (click)="search()"></button>-->
+<!--</md-card>-->
+

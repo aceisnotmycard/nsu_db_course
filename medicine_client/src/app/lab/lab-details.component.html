@@ -1,0 +1,10 @@
+<md-card *ngIf="item">
+  <div>
+    <md-input [(ngModel)]="item.name" placeholder="Name"></md-input>
+    <md-checkbox type="checkbox" [(ngModel)]="item.biochemistry">Biochemistry?</md-checkbox>
+    <md-checkbox type="checkbox" [(ngModel)]="item.chemistry">Chemistry?</md-checkbox>
+    <md-checkbox type="checkbox" [(ngModel)]="item.physiology">Physiology?</md-checkbox>
+  </div>
+  <button md-button (click)="update()">Update</button>
+  <button md-button (click)="del()">Delete</button>
+</md-card>

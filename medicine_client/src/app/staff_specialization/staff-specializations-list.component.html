@@ -1,0 +1,16 @@
+<md-card style="width: 480px; margin: 8px;">
+  <md-card-title>Staff specializations list</md-card-title>
+  <md-list>
+    <md-list-item *ngFor="let doc of items">
+      <staff-specialization-item [item]="doc"></staff-specialization-item>
+    </md-list-item>
+  </md-list>
+</md-card>
+
+<md-card style="width: 480px; margin: 8px;">
+  <md-card-title>Add new specialization</md-card-title>
+  <div>
+    <md-input [(ngModel)]="newItem.name" placeholder="Name"></md-input><br>
+  </div>
+  <button md-button (click)="create()">Add</button>
+</md-card>

@@ -1,0 +1,19 @@
+<md-card style="width: 480px; margin: 8px;">
+  <md-card-title>Lab-facility contract list</md-card-title>
+  <md-list>
+    <md-list-item *ngFor="let doc of items">
+      <lab-facility-item [item]="doc"></lab-facility-item>
+    </md-list-item>
+  </md-list>
+</md-card>
+
+<md-card style="width: 480px; margin: 8px;">
+  <md-card-title>Add new contract</md-card-title>
+  <div>
+    <md-input [(ngModel)]="labName" placeholder="Lab name"></md-input>
+    <md-input [(ngModel)]="facAddress" placeholder="Address"></md-input>
+    <md-input [(ngModel)]="newItem.startDate" type="date"></md-input><br>
+    <md-input [(ngModel)]="newItem.endDate" type="date"></md-input><br>
+  </div>
+  <button md-button (click)="create()">Add</button>
+</md-card>

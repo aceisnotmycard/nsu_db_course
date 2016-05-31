@@ -1,0 +1,6 @@
+<md-card *ngIf="item">
+  <md-card-title>{{ item.name }}</md-card-title>
+  <p>{{ item.specialization.name }}</p>
+  <button md-button (click)="update()">Update</button>
+  <button md-button (click)="del()">Delete</button>
+</md-card>

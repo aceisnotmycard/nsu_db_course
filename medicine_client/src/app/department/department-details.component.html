@@ -1,0 +1,14 @@
+<md-card *ngIf="item && item.facility" style="width: 480px; margin: 8px;">
+  {{ item.facility.address }}<br>
+  <button md-button (click)="update()">Update</button>
+  <button md-button (click)="del()">Delete</button>
+</md-card>
+
+<md-card *ngIf="rooms" style="width: 480px; margin: 8px;">
+  <md-card-title>Rooms</md-card-title>
+  <md-list>
+    <md-list-item *ngFor="let room of rooms">
+      <room-item [item]="room"></room-item>
+    </md-list-item>
+  </md-list>
+</md-card>

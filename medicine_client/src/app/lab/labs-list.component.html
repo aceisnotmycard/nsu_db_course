@@ -1,0 +1,19 @@
+<md-card style="width: 480px; margin: 4px;">
+  <md-card-title>Labs list</md-card-title>
+  <md-list>
+    <md-list-item *ngFor="let doc of items">
+      <lab-item [item]="doc"></lab-item>
+    </md-list-item>
+  </md-list>
+</md-card>
+
+<md-card style="width: 480px; margin: 4px;">
+  <md-card-title>Add new lab</md-card-title>
+  <div>
+    <md-input [(ngModel)]="newItem.name" placeholder="Name"></md-input><br>
+    <md-checkbox type="checkbox" [(ngModel)]="newItem.biochemistry">Biochemistry?</md-checkbox><br/>
+    <md-checkbox type="checkbox" [(ngModel)]="newItem.chemistry">Chemistry?</md-checkbox><br/>
+    <md-checkbox type="checkbox" [(ngModel)]="newItem.physiology">Physiology?</md-checkbox><br/>
+  </div>
+  <button md-button (click)="create()">Add</button>
+</md-card>

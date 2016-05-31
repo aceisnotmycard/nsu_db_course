@@ -1,0 +1,12 @@
+<md-card *ngIf="item && item.doctors && item.doctors[0] && item.patient && item.room">
+  <div>
+    <p>Patient: {{item.patient.name}}</p>
+    <p>Doctor: {{item.doctors[0].name}}</p>
+    <p>Facility address: {{item.room.department.facility.address}}, room: {{item.room.name}}</p>
+    <md-input [(ngModel)]="item.temperature" type="number" step="0.01" placeholder="Temperature" ></md-input><br/>
+    <md-input [(ngModel)]="item.startDate" type="date"></md-input><br>
+    <md-input [(ngModel)]="item.endDate" type="date"></md-input><br>
+  </div>
+  <button md-button (click)="update()">Update</button>
+  <button md-button (click)="del()">Delete</button>
+</md-card>

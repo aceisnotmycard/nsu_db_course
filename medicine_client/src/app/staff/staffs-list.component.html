@@ -1,0 +1,18 @@
+<md-card style="width: 480px; margin: 8px;">
+  <md-card-title>Staffs list</md-card-title>
+  <md-list>
+    <md-list-item *ngFor="let doc of items">
+      <staff-item [item]="doc"></staff-item>
+    </md-list-item>
+  </md-list>
+</md-card>
+
+<md-card style="width: 480px; margin: 8px;">
+  <md-card-title>Add new employee</md-card-title>
+  <div>
+    <md-input [(ngModel)]="newItem.name" placeholder="Name"></md-input><br>
+    <md-input [(ngModel)]="facilityId" placeholder="Facility id" type="number"></md-input><br>
+    <md-input [(ngModel)]="specName" placeholder="Specialization"></md-input><br/>
+  </div>
+  <button md-button (click)="check()">Add</button>
+</md-card>

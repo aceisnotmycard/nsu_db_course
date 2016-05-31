@@ -1,0 +1,20 @@
+<md-card style="width: 480px; margin: 8px;">
+  <md-card-title>Operations list</md-card-title>
+  <md-list>
+    <md-list-item *ngFor="let doc of items">
+      <operation-item [item]="doc"></operation-item>
+    </md-list-item>
+  </md-list>
+</md-card>
+
+<md-card style="width: 480px; margin: 8px;">
+  <md-card-title>Add new operation</md-card-title>
+  <div>
+    <md-input [(ngModel)]="surgeonName" placeholder="Surgeon"></md-input><br>
+    <md-input [(ngModel)]="facilityAddress" placeholder="Facility address"></md-input><br>
+    <md-input [(ngModel)]="recordId" placeholder="Record #" type="number"></md-input><br>
+    <md-input [(ngModel)]="newItem.date" type="date"></md-input><br>
+    <md-checkbox type="checkbox" [(ngModel)]="newItem.isSurvived">Survived</md-checkbox><br/>
+  </div>
+  <button md-button (click)="create()">Add</button>
+</md-card>

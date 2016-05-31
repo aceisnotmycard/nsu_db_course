@@ -1,0 +1,18 @@
+<md-card style="width: 480px; margin: 8px;">
+  <md-card-title>Patients list</md-card-title>
+  <md-list>
+    <md-list-item *ngFor="let doc of items">
+      <patient-item [item]="doc"></patient-item>
+    </md-list-item>
+  </md-list>
+</md-card>
+
+<md-card style="width: 480px; margin: 8px;">
+  <md-card-title>Add new patient</md-card-title>
+  <div>
+    <md-input [(ngModel)]="newItem.name" placeholder="Name"></md-input><br>
+    <md-checkbox type="checkbox" [(ngModel)]="newItem.isMale">Male?</md-checkbox><br/>
+    <md-input [(ngModel)]="newItem.birthDate" type="date"></md-input>
+  </div>
+  <button md-button (click)="create()">Add</button>
+</md-card>

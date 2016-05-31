@@ -1,0 +1,7 @@
+<md-card *ngIf="item">
+  <md-input [(ngModel)]="item.name" placeholder="Name"></md-input><br>
+  <md-checkbox type="checkbox" [(ngModel)]="item.isMale">Male?</md-checkbox><br/>
+  <md-input [(ngModel)]="item.birthDate" type="date"></md-input><br>
+  <button md-button (click)="update()">Update</button>
+  <button md-button (click)="del()">Delete</button>
+</md-card>

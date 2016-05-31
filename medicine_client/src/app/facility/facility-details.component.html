@@ -1,0 +1,11 @@
+<md-card *ngIf="item">
+    <div>
+        <md-input [(ngModel)]="item.address" placeholder="Address"></md-input>
+        <md-checkbox type="checkbox" [(ngModel)]="item.clinic">Clinic?</md-checkbox>
+        <div *ngIf="item.clinic === true">
+            <md-input [(ngModel)]="item.parentId" type="number" placeholder="Parent hospital id"></md-input>
+        </div>
+    </div>
+    <button md-button (click)="update()">Update</button>
+    <button md-button (click)="del()">Delete</button>
+</md-card>
