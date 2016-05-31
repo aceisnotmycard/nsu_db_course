@@ -1,1 +1,1 @@
-# nsu_db_course
+My first ever experience with Spring Boot and Angular 2
